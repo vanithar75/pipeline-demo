@@ -5,9 +5,12 @@ metadata:
     app: oc-pipeline-demo-3
   name: oc-pipeline-demo-3
 spec:
-  port:
-    targetPort: 8080-tcp
   to:
     kind: Service
     name: oc-pipeline-demo-3
     weight: 100
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge
+  wildcardPolicy: None
