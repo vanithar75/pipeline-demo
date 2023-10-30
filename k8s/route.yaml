@@ -2,12 +2,12 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   labels:
-    app: oc-pipeline-demo-3
-  name: oc-pipeline-demo-3
+    app: pipeline-demo
+  name: pipeline-demo
 spec:
   to:
     kind: Service
-    name: oc-pipeline-demo-3
+    name: pipeline-demo
     weight: 100
   port:
     targetPort: 8080
