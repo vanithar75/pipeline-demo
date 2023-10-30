@@ -18,9 +18,8 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   labels:
-  name: pipeline-demo3
+  name: pipeline-demo
 spec:
-  subdomain: hello-openshift
   tls:
     termination: edge
     insecureEdgeTerminationPolicy: None
