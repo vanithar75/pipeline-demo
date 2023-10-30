@@ -2,22 +2,22 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: oc-pipeline-demo-3
-  name: oc-pipeline-demo-3
+    app: pipeline-demo
+  name: pipeline-demo
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: oc-pipeline-demo-3
+      app: pipeline-demo
   template:
     metadata:
       labels:
-        app: oc-pipeline-demo-3
+        app: pipeline-demo
     spec:
       containers:
         - image: quay.io/vanithasathish/oc-pipeline-demo-3:latest
           imagePullPolicy: Always
-          name: oc-pipeline-demo-3
+          name: pipeline-demo
           ports:
             - containerPort: 8080
               protocol: TCP
